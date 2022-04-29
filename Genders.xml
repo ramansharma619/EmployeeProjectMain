@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Genders>
+	<Gender>
+		<GenderText>Male</GenderText>
+		<GenderValue>Male</GenderValue>
+	</Gender>
+	<Gender>
+		<GenderText>Female</GenderText>
+		<GenderValue>Female</GenderValue>
+	</Gender> 
+</Genders>
