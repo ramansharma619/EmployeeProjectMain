@@ -42,18 +42,24 @@
                     </div>
                 </div>
 
-                <div class="row my-3 d-flex justify-content-center   ">
+                <div class="row my-3 d-flex justify-content-center">
                     <div class="col-lg-3 col-sm-12">
                         <asp:Button ID="LoginBtn" CssClass="btn btn-outline-info w-100 " runat="server" Text="Login" OnClick="LoginBtn_Click" />
                     </div>
-              <div class="col-lg-3 col-sm-12">
+                    <div class="col-lg-3 col-sm-12">
                         <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Register.aspx">Already registered!</asp:HyperLink>
-                    </div>  
+                    </div>
+                   
+                </div>
+                <div class="row">
+                     <div class="col-lg-3 col-sm-12 text" >
+                        <asp:HyperLink ID="ForgetPassword" runat="server" NavigateUrl="~/Forget.aspx">Forgot Password</asp:HyperLink>
+                    </div>
                 </div>
 
             </div>
 
         </div>
-        </div>
+    </div>
 </asp:Content>
 

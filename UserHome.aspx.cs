@@ -25,7 +25,7 @@ namespace EmployeeProject
 
         private void BindGrid()
         {
-            DataTable data = EmployeeHandler.GetSingleRecordById(1);
+            DataTable data = EmployeeHandler.GetSingleRecordById(3);
             GridView1.DataSource = data;
             GridView1.DataBind();
         }
