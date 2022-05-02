@@ -50,6 +50,9 @@
             <div>
                 <span class="h3 text-muted">Reset your password</span>
             </div>
+            <div id="alertBox" class="alert alert-danger mt-1 mb-0" role="alert" runat="server" >
+                <asp:Label ID="AlertMsg" runat="server" Text=""></asp:Label>
+            </div>
             <div class="card-body">
                 <form id="form1" runat="server">
                     <div class="form-group row">
@@ -73,13 +76,13 @@
                             <asp:TextBox CssClass="w-100 outline-none input--style-1" ID="NewPassword" runat="server"></asp:TextBox>
                         </div>
                         <div class="col-sm-12">
-                            <asp:RequiredFieldValidator ControlToValidate="NewPassword" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please use at least 8 character*" Display="Static" ForeColor="Red" Font-Size="Smaller"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ControlToValidate="NewPassword" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter new password*" Display="Static" ForeColor="Red" Font-Size="Smaller"></asp:RequiredFieldValidator>
                             <asp:Label ID="NewPasswordError" runat="server" Text=""></asp:Label>
                         </div>
 
                     </div>
                     <div class="form-group row">
-                          <div class="col-sm-12">
+                        <div class="col-sm-12">
                             <asp:Label ID="ConfirmPasswordLbl" CssClass="" runat="server" Text="Confirm Password"></asp:Label>
                             <asp:Label ID="ConfirmPasswordMsgLbl" runat="server" Text=""></asp:Label>
                         </div>
@@ -87,14 +90,16 @@
                             <asp:TextBox CssClass="w-100 outline-none input--style-1" ID="ConfirmPassword" runat="server"></asp:TextBox>
                         </div>
                         <div class="col-sm-12">
-                            <asp:RequiredFieldValidator ControlToValidate="ConfirmPassword" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password do not match*" Display="Static" ForeColor="Red" Font-Size="Smaller"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ControlToValidate="ConfirmPassword" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please confirm your password*" Display="Dynamic" ForeColor="Red" Font-Size="Smaller"></asp:RequiredFieldValidator>
                             <asp:Label ID="ConfirmPasswordError" runat="server" Text=""></asp:Label>
+                            <br />
+                            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="NewPassword" ControlToValidate="ConfirmPassword" ErrorMessage="Password doesn't match*" Font-Size="Smaller" ForeColor="Red"></asp:CompareValidator>
                         </div>
 
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <asp:LinkButton ID="Reset" class="btn btn-primary"  runat="server" OnClick="Reset_Click"> Reset Password &nbsp;  <i class="fa-solid fa-arrow-rotate-right"></i></asp:LinkButton>
+                            <asp:LinkButton ID="Reset" class="btn btn-primary" runat="server" OnClick="Reset_Click"> Reset Password &nbsp;  <i class="fa-solid fa-arrow-rotate-right"></i></asp:LinkButton>
                         </div>
                     </div>
 

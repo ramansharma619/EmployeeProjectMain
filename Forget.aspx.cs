@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BussinessLogicLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,14 +12,27 @@ namespace EmployeeProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            alertBox.Visible = false;
         }
 
-        
         protected void Reset_Click(object sender, EventArgs e)
         {
-            if(Page.IsValid)
+            if (Page.IsValid)
             {
+                string email = Email.Text;
+                string newPassword = NewPassword.Text; 
+                bool isChanged = EmployeeHandler.SearchRecordByEmailIdAndUpdatePassword(email, newPassword);
+                if (isChanged)
+                {
+                    Session["Message"] = "Password Changed succesfully!";
+                    Response.Redirect("Login");
+                }
+                else
+                {
+                    alertBox.Visible = true;
+                    AlertMsg.Text = "Please enter a valid email";
+
+                }
 
             }
 
