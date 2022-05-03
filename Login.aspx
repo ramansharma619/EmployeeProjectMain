@@ -1,15 +1,20 @@
 ﻿<%@ Page Language="C#" Title="Login Page" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EmployeeProject.Login" %>
-
+  
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+   
+
     <div class="container d-flex align-items-center vh-100">
         <div class="row w-100">
-            <div class="col-12 d-flex justify-content-center align-items-center mb-3">
+         
+            <div class="col-8 m-auto card shadow-sm">
+                <div class="card-body">
+
+                       <div class="col-12 d-flex justify-content-center align-items-center mb-3">
                 <span class="h3 text-muted">
                     <%: Title %>
                 </span>
             </div>
-            <div class="col-8 m-auto card shadow-sm">
-                <div class="card-body">
+
                     <div class="mb-1  text-center mx-auto   ">
                         <asp:Label ID="MessageLabel" CssClass="text-success font-weight-bold" runat="server" Text=""></asp:Label>
                     </div>
