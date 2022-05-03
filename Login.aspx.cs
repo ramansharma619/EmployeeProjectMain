@@ -20,7 +20,7 @@ namespace EmployeeProject
                     Response.Redirect("Home");
                 }
 
-                PasswordField.Attributes["type"] = "password";
+                //PasswordField.Attributes["type"] = "password";
                 if (Session["Message"] != null)
                 {
                     MessageLabel.Text = Session["Message"].ToString();
@@ -32,7 +32,7 @@ namespace EmployeeProject
         protected void LoginBtn_Click(object sender, EventArgs e)
         {
             
-            var id = EmployeeHandler.CheckRecordInDataBase(Email.Text, PasswordField.Text);
+            var id = EmployeeHandler.CheckRecordInDataBase(Email.Text, PasswordField1.Value);
             if (id is null)
             {
                 MessageLabel.Text = "Invalid email or password";
