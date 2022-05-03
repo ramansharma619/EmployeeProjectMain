@@ -1,9 +1,11 @@
 ﻿
-//function showMessage() {
-//    const span = document.getElementById("output-span");
-//    span.innerHTML = "Hello world";
+//function ToggleEyeIcon() {
+//    const eyeIcon = document.getelementbyid("EyeIcon");
+//    eyeIcon.addEventListener("click", () => {
+//        alert("!");
+//    })
 //}
 
-//function pageLoad() {
-//    showMessage();
+//function pageload() {
+//    ToggleEyeIcon();
 //}

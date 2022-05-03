@@ -42,13 +42,13 @@ namespace EmployeeProject
         protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailValidate;
 
         /// <summary>
-        /// PasswordField control.
+        /// PasswordField1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordField;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword PasswordField1;
 
         /// <summary>
         /// RequiredPassword control.
