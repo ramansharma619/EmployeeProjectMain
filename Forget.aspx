@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Forget.aspx.cs" Inherits="EmployeeProject.Forget" %>
+﻿
+<%@ Page Title="Reset your password" Language="C#" AutoEventWireup="true" CodeBehind="Forget.aspx.cs" Inherits="EmployeeProject.Forget" %>
 
 <!DOCTYPE html>
 
@@ -47,8 +48,17 @@
 <body>
     <div class="container vh-100 d-flex  justify-content-center align-items-center">
         <div class="card shadow-sm rounded p-3">
+           <div class="p-1">
+                <span class="">
+                    <asp:HyperLink ID="BackToLogin" runat="server" NavigateUrl="~/Login.aspx" CssClass="card-link">
+                       <i class="fa-solid fa-arrow-left"></i> &nbsp; Back To Login
+
+                    </asp:HyperLink>
+                </span>
+            </div>
+
             <div>
-                <span class="h3 text-muted">Reset your password</span>
+                <span class="h3 text-muted"><%:Title %></span>
             </div>
             <div id="alertBox" class="alert alert-danger mt-1 mb-0" role="alert" runat="server" >
                 <asp:Label ID="AlertMsg" runat="server" Text=""></asp:Label>

@@ -13,6 +13,8 @@ namespace EmployeeProject
         protected void Page_Load(object sender, EventArgs e)
         {
             alertBox.Visible = false;
+            NewPassword.Attributes["type"] = "password";
+            ConfirmPassword.Attributes["type"] = "password";
         }
 
         protected void Reset_Click(object sender, EventArgs e)
